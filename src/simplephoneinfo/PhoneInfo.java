@@ -61,8 +61,8 @@ public class PhoneInfo {
 			
 			if(select == 1) {
 				input.nextLine();
-				
-				System.out.print("이름: ");
+			
+				System.out.print("\n이름: ");
 				setName(input.nextLine());
 									
 				System.out.print("전화번호: ");
