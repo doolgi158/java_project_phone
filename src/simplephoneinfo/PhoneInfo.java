@@ -1,14 +1,9 @@
 package simplephoneinfo;
 
-import java.util.Scanner;
-
 public class PhoneInfo {
 	private String name, phoneNumber, birthday;
-	private boolean tof;
-	private int select;
-	
-	private Scanner input = new Scanner(System.in);
-	
+	public boolean tof;
+		
 	public PhoneInfo() {
 		
 	}
@@ -51,40 +46,6 @@ public class PhoneInfo {
 			tof = false;
 		}else {
 			System.out.printf("name: %s\nphone: %s", name, phoneNumber);
-		}
-	}
-	public void inputPhoneNumber() {
-		while(true) {
-			System.out.println("선택하세요.\n1. 데이터 입력\n2. 프로그램종료");
-			System.out.print("선택: ");
-			select = input.nextInt();
-			
-			if(select == 1) {
-				input.nextLine();
-			
-				System.out.print("\n이름: ");
-				setName(input.nextLine());
-									
-				System.out.print("전화번호: ");
-				setPhoneNumber(input.nextLine());
-										
-				System.out.print("생년원일: ");
-				setBirthday(input.nextLine());
-					
-				if(birthday.equals("")) {
-					tof = false;
-				}
-			
-				System.out.println("\n입력된 정보 출력...");
-				showPhoneInfo();
-				System.out.println("\n");
-			}else if(select == 2) {
-				System.out.print("프로그램을 종료합니다.");
-				break;
-			}else {
-				System.out.println("\n1혹은 2를 입력하세요.");
-				continue;
-			}
 		}
 	}
 }
